@@ -237,5 +237,20 @@ SZELEP1: :="WEB_DATA".SZELEP1:
     <button class="myButton" type="submit">reset</button>
 </form>
 
+<h3>A demonstration of how to access an IMG element</h3>
+
+<img id="myImg" src="https://st4.depositphotos.com/1432405/22187/v/1600/depositphotos_221879318-stock-illustration-industrial-pipe-valve-icon-digital.jpg" alt="The Pulpit Rock" width="304" height="228">
+
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("myImg").src;
+        document.getElementById("demo").innerHTML = x;
+    }
+</script>
 </body>
 </html>
