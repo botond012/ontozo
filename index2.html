@@ -14,23 +14,44 @@
 		<meta charset="utf-8">
 			<title>FOS</title>
 			<meta name="viewport" content="width=device-width, initial-scale=1">
-				<style>
-table {
-  font-family: arial, sans-serif;
+			<style>
+#days {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 100%;
 }
 
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
+#days td, #days th {
+  border: 1px solid #ddd;
   padding: 8px;
 }
 
-tr:nth-child(even) {
-  background-color: #dddddd;
+#days tr:nth-child(even){background-color: #f2f2f2;}
+
+#days tr:hover {background-color: #ddd;}
+
+#days th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+  
 }
-				</style>
+.myButton {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+</style>
 			</head>
 			<body>
 		:="WEB_DATA".WORD:
@@ -48,32 +69,64 @@ tr:nth-child(even) {
 				</form>
 		MOTOR: :="WEB_DATA".SZELEP1:
 
-			
-				<form method="post">
-					<input type="checkbox" id="hetfo" name='"WEB_DATA".HETFO' value="1">
-					<label for="hetfo"> Hétfő</label>
-
-					<input type="checkbox" id="kedd" name='"WEB_DATA".KEDD' value="1">
-					<label for="kedd"> Kedd</label>
-
-					<input type="checkbox" id="szerda" name='"WEB_DATA".SZERDA' value="1">
-					<label for="szerda"> Szerda</label>
-
-					<input type="checkbox" id="csut" name='"WEB_DATA".CSUTORTOK' value="1">
-					<label for="csut"> Csütörtök</label>
-					
-					<input type="checkbox" id="pentek" name='"WEB_DATA".PENTEK' value="1">
-					<label for="pentek"> Péntek</label>
-
-					<input type="checkbox" id="szombat" name='"WEB_DATA".SZOMBAT' value="1">
-					<label for="szombat"> Szombat</label>
-
-					<input type="checkbox" id="vasarnap" name='"WEB_DATA".VASARNAP' value="1">
-					<label for="vasarnap"> Vasárnap</label>
-					<!--csak azért h a save gomb ne rohadjon el -->
+<form method="post">
+<table id="days">
+  <tr>
+    <th>Napok</th>
+    <th>Mettől</th>
+    <th>Meddig</th>
+  </tr>
+  <tr>
+    <td><input type="checkbox" id="hetfo" name='"WEB_DATA".HETFO' value="1">
+					<label for="hetfo"> Hétfő</label></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" id="kedd" name='"WEB_DATA".KEDD' value="1">
+					<label for="kedd"> Kedd</label></td>
+    <td> </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" id="szerda" name='"WEB_DATA".SZERDA' value="1">
+					<label for="szerda"> Szerda</label></td>
+    <td> </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" id="csut" name='"WEB_DATA".CSUTORTOK' value="1">
+					<label for="csut"> Csütörtök</label></td>
+    <td> </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>		<input type="checkbox" id="pentek" name='"WEB_DATA".PENTEK' value="1">
+					<label for="pentek"> Péntek</label></td>
+    <td> </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>	<input type="checkbox" id="szombat" name='"WEB_DATA".SZOMBAT' value="1">
+					<label for="szombat"> Szombat</label></td>
+    <td> </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>	<input type="checkbox" id="vasarnap" name='"WEB_DATA".VASARNAP' value="1">
+					<label for="vasarnap"> Vasárnap</label></td>
+    <td> </td>
+    <td></td>
+  </tr>
+  
+</table>
+			<!--csak azért h a save gomb ne rohadjon el -->
 					<input type="hidden" id="semmise" name='semmi' value="1">
-					<button type="submit">save</button>
+					<button class="myButton" type="submit">save</button>
 				</form>
+			
+				
+				
 				
 				Hétfő::="WEB_DATA".HETFO:<br>
 				Kedd::="WEB_DATA".KEDD:<br>
@@ -104,7 +157,7 @@ tr:nth-child(even) {
 
 					<input type="hidden" id="vasarnap" name='"WEB_DATA".VASARNAP' value="0">
 
-					<button type="submit">reset</button>
+					<button class="myButton" type="submit">reset</button>
 				</form>
 
 		</body>
