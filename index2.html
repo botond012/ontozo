@@ -14,7 +14,7 @@
 		<meta charset="utf-8">
 			<title>FOS</title>
 			<meta name="viewport" content="width=device-width, initial-scale=1">
-			<style>
+				<style>
 #days {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   border-collapse: collapse;
@@ -36,7 +36,7 @@
   text-align: left;
   background-color: #4CAF50;
   color: white;
-  
+
 }
 .myButton {
   background-color: #4CAF50;
@@ -51,7 +51,7 @@
   cursor: pointer;
 }
 
-</style>
+				</style>
 			</head>
 			<body>
 		:="WEB_DATA".WORD:
@@ -60,105 +60,110 @@
 					<button type="submit">save</button>
 				</form>
 				<form>
-					<input type="submit" value="START"/>
+					<input  class="myButton" type="submit" value="START"/>
 					<input type="hidden" name='"WEB_DATA".SZELEP1' value="1"/>
 				</form>
 				<form>
-					<input type="submit" value="STOP"/>
+					<input class="myButton"type="submit" value="STOP"/>
 					<input type="hidden" name='"WEB_DATA".SZELEP1' value="0"/>
 				</form>
-		MOTOR: :="WEB_DATA".SZELEP1:
+		SZELEP1: :="WEB_DATA".SZELEP1:
 
-<form method="post">
-<table id="days">
-  <tr>
-    <th>Napok</th>
-    <th>Mettől</th>
-    <th>Meddig</th>
-  </tr>
-  <tr>
-    <td><input type="checkbox" id="hetfo" name='"WEB_DATA".HETFO' value="1">
-					<label for="hetfo"> Hétfő</label></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td><input type="checkbox" id="kedd" name='"WEB_DATA".KEDD' value="1">
-					<label for="kedd"> Kedd</label></td>
-    <td> </td>
-    <td></td>
-  </tr>
-  <tr>
-    <td><input type="checkbox" id="szerda" name='"WEB_DATA".SZERDA' value="1">
-					<label for="szerda"> Szerda</label></td>
-    <td> </td>
-    <td></td>
-  </tr>
-  <tr>
-    <td><input type="checkbox" id="csut" name='"WEB_DATA".CSUTORTOK' value="1">
-					<label for="csut"> Csütörtök</label></td>
-    <td> </td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>		<input type="checkbox" id="pentek" name='"WEB_DATA".PENTEK' value="1">
-					<label for="pentek"> Péntek</label></td>
-    <td> </td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>	<input type="checkbox" id="szombat" name='"WEB_DATA".SZOMBAT' value="1">
-					<label for="szombat"> Szombat</label></td>
-    <td> </td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>	<input type="checkbox" id="vasarnap" name='"WEB_DATA".VASARNAP' value="1">
-					<label for="vasarnap"> Vasárnap</label></td>
-    <td> </td>
-    <td></td>
-  </tr>
-  
-</table>
-			<!--csak azért h a save gomb ne rohadjon el -->
-					<input type="hidden" id="semmise" name='semmi' value="1">
-					<button class="myButton" type="submit">save</button>
-				</form>
-			
-				
-				
-				
-				Hétfő::="WEB_DATA".HETFO:<br>
-				Kedd::="WEB_DATA".KEDD:<br>
-				Szerda::="WEB_DATA".SZERDA:<br>
-				Csütörtök::="WEB_DATA".CSUTORTOK:<br>
-				Péntek::="WEB_DATA".PENTEK:<br>
-				Szombat::="WEB_DATA".SZOMBAT:<br>
-				Vasárnap::="WEB_DATA".VASARNAP:<br>
-			
 				<form method="post">
-				<input type="hidden" id="hetfo" name='"WEB_DATA".HETFO'value="0">
-					
+					<table id="days">
+						<tr>
+							<th>Napok</th>
+							<th>Mettől</th>
+							<th>Meddig</th>
+						</tr>
+						<tr>
+							<td>
+								<input type="checkbox" id="hetfo" name='"WEB_DATA".HETFO' value="1">
+									<label for="hetfo"> Hétfő 		:="WEB_DATA".HETFO:</label>
+								</td>
+								<td/>
+								<td/>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" id="kedd" name='"WEB_DATA".KEDD' value="1">
+										<label for="kedd"> Kedd			:="WEB_DATA".KEDD:</label>
+									</td>
+									<td> </td>
+									<td/>
+								</tr>
+								<tr>
+									<td>
+										<input type="checkbox" id="szerda" name='"WEB_DATA".SZERDA' value="1">
+											<label for="szerda"> Szerda			:="WEB_DATA".SZERDA:</label>
+										</td>
+										<td> </td>
+										<td/>
+									</tr>
+									<tr>
+										<td>
+											<input type="checkbox" id="csut" name='"WEB_DATA".CSUTORTOK' value="1">
+												<label for="csut"> Csütörtök			:="WEB_DATA".CSUTORTOK:</label>
+											</td>
+											<td> </td>
+											<td/>
+										</tr>
+										<tr>
+											<td>
+												<input type="checkbox" id="pentek" name='"WEB_DATA".PENTEK' value="1">
+													<label for="pentek"> Péntek			:="WEB_DATA".PENTEK:</label>
+												</td>
+												<td> </td>
+												<td/>
+											</tr>
+											<tr>
+												<td>
+													<input type="checkbox" id="szombat" name='"WEB_DATA".SZOMBAT' value="1">
+														<label for="szombat"> Szombat			:="WEB_DATA".SZOMBAT:</label>
+													</td>
+													<td> </td>
+													<td/>
+												</tr>
+												<tr>
+													<td>
+														<input type="checkbox" id="vasarnap" name='"WEB_DATA".VASARNAP' value="1">
+															<label for="vasarnap"> Vasárnap			:="WEB_DATA".VASARNAP:</label>
+														</td>
+														<td> </td>
+														<td/>
+													</tr>
 
-					<input type="hidden" id="kedd" name='"WEB_DATA".KEDD' value="0">
-					
+												</table>
+												<!--csak azért h a save gomb ne rohadjon el -->
+												<input type="hidden" id="semmise" name='semmi' value="1">
+													<button class="myButton" type="submit">save</button>
+												</form>
 
-					<input type="hidden" id="szerda" name='"WEB_DATA".SZERDA' value="0">
-					
 
-					<input type="hidden" id="csut" name='"WEB_DATA".CSUTORTOK' value="0">
-					
-					
-					<input type="hidden" id="pentek" name='"WEB_DATA".PENTEK' value="0">
-					
 
-					<input type="hidden" id="szombat" name='"WEB_DATA".SZOMBAT' value="0">
-					
+																			<form method="post">
+																				<input type="hidden" id="hetfo" name='"WEB_DATA".HETFO'value="0">
 
-					<input type="hidden" id="vasarnap" name='"WEB_DATA".VASARNAP' value="0">
 
-					<button class="myButton" type="submit">reset</button>
-				</form>
+																					<input type="hidden" id="kedd" name='"WEB_DATA".KEDD' value="0">
 
-		</body>
-	</html>
+
+																						<input type="hidden" id="szerda" name='"WEB_DATA".SZERDA' value="0">
+
+
+																							<input type="hidden" id="csut" name='"WEB_DATA".CSUTORTOK' value="0">
+
+
+																								<input type="hidden" id="pentek" name='"WEB_DATA".PENTEK' value="0">
+
+
+																									<input type="hidden" id="szombat" name='"WEB_DATA".SZOMBAT' value="0">
+
+
+																										<input type="hidden" id="vasarnap" name='"WEB_DATA".VASARNAP' value="0">
+
+																											<button class="myButton" type="submit">reset</button>
+																										</form>
+
+																									</body>
+																								</html>
