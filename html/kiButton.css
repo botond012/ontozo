@@ -1,0 +1,22 @@
+<a href="#" class="kiButton">ki</a>
+
+.kiButton {
+	background-color:#c74545;
+	border-radius:23px;
+	border:1px solid #d11745;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	padding:22px 13px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #80101f;
+}
+.kiButton:hover {
+	background-color:#f2415f;
+}
+.kiButton:active {
+	position:relative;
+	top:1px;
+}

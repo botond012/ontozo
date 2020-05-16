@@ -1,0 +1,113 @@
+awk -F'\t' '$1!=prev{close(out); out=$1".txt"; prev=$1} {sub(/[^\t]+\t/,""); print > out}' file
+if (this.id == 'hetfofromb') {
+                url = "IO/hetfofrom.html";
+                name1 = '"WEB_DATA".HETFO_FROM';
+                val = $('input[id=hetfofrom]').val();
+                sdata = escape(name1) + '=' + val;
+                $.post(url, sdata, function (result) {
+                });
+            }
+if (this.id == 'hetfotob') {
+                url = "IO/hetfoto.html";
+                name2 = '"WEB_DATA".HETFO_TO';
+                val = $('input[id=hetfoto]').val();
+                sdata = escape(name2) + '=' + val;
+                $.post(url, sdata, function (result) {
+                });
+            }
+            if (this.id == 'keddfromb') {
+                url = "IO/keddfrom.html";
+                name3 = '"WEB_DATA".KEDD_FROM';
+                val = $('input[id=keddfrom]').val();
+                sdata = escape(name3) + '=' + val;
+                $.post(url, sdata, function (result) {
+                });
+            }
+            if (this.id == 'keddtob') {
+                url = "IO/keddto.html";
+                name4 = '"WEB_DATA".KEDD_TO';
+                val = $('input[id=keddto]').val();
+                sdata = escape(name4) + '=' + val;
+                $.post(url, sdata, function (result) {
+                });
+            }
+            if (this.id == 'szerdafromb') {
+                url = "IO/szerdafrom.html";
+                name5 = '"WEB_DATA".SZERDA_FROM';
+                val = $('input[id=szerdafrom]').val();
+                sdata = escape(name5) + '=' + val;
+                $.post(url, sdata, function (result) {
+                });
+            }
+            if (this.id == 'szerdatob') {
+                url = "IO/szerdato.html";
+                name6 = '"WEB_DATA".SZERDA_TO';
+                val = $('input[id=szerdato]').val();
+                sdata = escape(name6) + '=' + val;
+                $.post(url, sdata, function (result) {
+                });
+            }
+            if (this.id == 'csutortokfromb') {
+                url = "IO/csutortokfrom.html";
+                name7 = '"WEB_DATA".CSUTORTOK_FROM';
+                val = $('input[id=csutortokfrom]').val();
+                sdata = escape(name7) + '=' + val;
+                $.post(url, sdata, function (result) {
+                });
+            }
+            if (this.id == 'csutortoktob') {
+                url = "IO/csutortokto.html";
+                name8 = '"WEB_DATA".CSUTORTOK_TO';
+                val = $('input[id=csutortokto]').val();
+                sdata = escape(name8) + '=' + val;
+                $.post(url, sdata, function (result) {
+                });
+            }
+            if (this.id == 'pentekfromb') {
+                url = "IO/pentekfrom.html";
+                name9 = '"WEB_DATA".PENTEK_FROM';
+                val = $('input[id=pentekfrom]').val();
+                sdata = escape(name9) + '=' + val;
+                $.post(url, sdata, function (result) {
+                });
+            }
+            if (this.id == 'pentektob') {
+                url = "IO/pentekto.html";
+                name10 = '"WEB_DATA".PENTEK_TO';
+                val = $('input[id=pentekto]').val();
+                sdata = escape(name10) + '=' + val;
+                $.post(url, sdata, function (result) {
+                });
+            }
+            if (this.id == 'szombatfromb') {
+                url = "IO/szombatfrom.html";
+                name11 = '"WEB_DATA".SZOMBAT_FROM';
+                val = $('input[id=szombatfrom]').val();
+                sdata = escape(name11) + '=' + val;
+                $.post(url, sdata, function (result) {
+                });
+            }
+            if (this.id == 'szombattob') {
+                url = "IO/szombatto.html";
+                name12 = '"WEB_DATA".SZOMBAT_TO';
+                val = $('input[id=szombatto]').val();
+                sdata = escape(name12) + '=' + val;
+                $.post(url, sdata, function (result) {
+                });
+            }
+            if (this.id == 'vasarnapfromb') {
+                url = "IO/vasarnapfrom.html";
+                name13 = '"WEB_DATA".VASARNAP_FROM';
+                val = $('input[id=vasarnapfrom]').val();
+                sdata = escape(name13) + '=' + val;
+                $.post(url, sdata, function (result) {
+                });
+            }
+            if (this.id == 'vasarnaptob') {
+                url = "IO/vasarnapto.html";
+                name14 = '"WEB_DATA".VASARNAP_TO';
+                val = $('input[id=vasarnapto]').val();
+                sdata = escape(name14) + '=' + val;
+                $.post(url, sdata, function (result) {
+                });
+            }

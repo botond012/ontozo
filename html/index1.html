@@ -1,0 +1,78 @@
+<!-- AWP_In_Variable Name='"WEB_DATA".WORD'-->
+<!-- AWP_In_Variable Name='"WEB_DATA".SZELEP1'-->
+<!-- AWP_In_Variable Name='"WEB_DATA".HETFO'-->
+<!-- AWP_In_Variable Name='"WEB_DATA".KEDD'-->
+<!-- AWP_In_Variable Name='"WEB_DATA".SZERDA'-->
+<!-- AWP_In_Variable Name='"WEB_DATA".CSUTORTOK'-->
+<!-- AWP_In_Variable Name='"WEB_DATA".PENTEK'-->
+<!-- AWP_In_Variable Name='"WEB_DATA".SZOMBAT'-->
+<!-- AWP_In_Variable Name='"WEB_DATA".VASARNAP'-->
+<!-- AWP_In_Variable Name='"WEB_DATA".HETFO_FROM'-->
+<!-- AWP_In_Variable Name='"WEB_DATA".KEDD_FROM'-->
+<!-- AWP_In_Variable Name='"WEB_DATA".SZERDA_FROM'-->
+<!-- AWP_In_Variable Name='"WEB_DATA".CSUTORTOK_FROM'-->
+<!-- AWP_In_Variable Name='"WEB_DATA".PENTEK_FROM'-->
+<!-- AWP_In_Variable Name='"WEB_DATA".SZOMBAT_FROM'-->
+<!-- AWP_In_Variable Name='"WEB_DATA".VASARNAP_FROM'-->
+<!-- AWP_In_Variable Name='"WEB_DATA".HETFO_TO'-->
+<!-- AWP_In_Variable Name='"WEB_DATA".KEDD_TO'-->
+<!-- AWP_In_Variable Name='"WEB_DATA".SZERDA_TO'-->
+<!-- AWP_In_Variable Name='"WEB_DATA".CSUTORTOK_TO'-->
+<!-- AWP_In_Variable Name='"WEB_DATA".PENTEK_TO'-->
+<!-- AWP_In_Variable Name='"WEB_DATA".SZOMBAT_TO'-->
+<!-- AWP_In_Variable Name='"WEB_DATA".VASARNAP_TO'-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>FOS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="beButton.css">
+    <link rel="stylesheet" type="text/css" href="myButton.css">
+    <link rel="stylesheet" type="text/css" href="daysTable.css">
+</head>
+<body>
+:="WEB_DATA".WORD:
+<form method="post">
+    <input name='"WEB_DATA".WORD' type="text"/>
+    <button type="submit">save</button>
+</form>
+<form>
+    <input class="myButton" type="submit" value="START"/>
+    <input type="hidden" name='"WEB_DATA".SZELEP1' value="1"/>
+</form>
+<form>
+    <input class="myButton" type="submit" value="STOP"/>
+    <input type="hidden" name='"WEB_DATA".SZELEP1' value="0"/>
+</form>
+
+<table class="unstyledTable ">
+    <tr>
+        <th>Szelep állapota</th>
+        <th>
+            <div id="szelep">
+                <img src=https://cmkt-image-prd.freetls.fastly.net/0.1.0/ps/3896383/600/400/m2/fpnw/wm0/cczflukvaqlcqrfocnv9f069ijoynt7o3p0xxl8f45srcgt4glfok7seutownlmm-.jpg?1516798207&s=fa55dcd2daed100152ac14aeea0db2de
+                     height="42" width="42"/>
+            </div>
+
+        </th>
+    </tr>
+</table>
+
+
+<button class="myButton" type="button"><a href=setting.html>beállítás</a></button>
+<button class="myButton" type="button"><a href=livedata.html>live</a></button>
+
+<script>
+    var szelep = ':="WEB_DATA".SZELEP1:';
+    if (szelep == '1') {
+
+        document.getElementById('display').style.visibility = 'visible';
+    } else {
+        document.getElementById('szelep').style.visibility = 'hidden';
+    }
+</script>
+</body>
+</html>

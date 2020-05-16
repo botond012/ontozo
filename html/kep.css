@@ -1,0 +1,37 @@
+#hetfokep {
+  display: none;
+  height: 40px;
+  width: 40px;
+float: right;
+}
+#keddkep {
+  display: none;
+  height: 40px;
+  width: 40px;
+}
+#szerdakep {
+  display: none;
+  height: 40px;
+  width: 40px;
+}
+
+#csutkep {
+  display: none;
+  height: 40px;
+  width: 40px;
+}
+#pentekkep {
+  display: none;
+  height: 40px;
+  width: 40px;
+}
+#szombatkep {
+  display: none;
+  height: 40px;
+  width: 40px;
+}
+#vasarnapkep {
+  display: none;
+  height: 40px;
+  width: 40px;
+}
