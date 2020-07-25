@@ -1,5 +1,7 @@
 <!-- AWP_In_Variable Name='"WEB_DATA".WORD'-->
 <!-- AWP_In_Variable Name='"WEB_DATA".SZELEP1'-->
+<!-- AWP_In_Variable Name='"WEB_DATA".ENGEDELYEZES'-->
+<!-- AWP_In_Variable Name='"WEB_DATA".SZELEPALLAPOT'-->
 <!-- AWP_In_Variable Name='"WEB_DATA".HETFO'-->
 <!-- AWP_In_Variable Name='"WEB_DATA".KEDD'-->
 <!-- AWP_In_Variable Name='"WEB_DATA".SZERDA'-->
@@ -27,7 +29,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>FOS</title>
+    <title>ONTOZO</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="beButton.css">
     <link rel="stylesheet" type="text/css" href="myButton.css">
@@ -48,12 +50,48 @@
     <input type="hidden" name='"WEB_DATA".SZELEP1' value="0"/>
 </form>
 
+
 <table class="unstyledTable ">
     <tr>
-        <th>Szelep állapota</th>
+        <th>Manualisan Elinditva</th>
         <th>
-            <div id="szelep">
+            <div id="manual">
                 <img src=https://cmkt-image-prd.freetls.fastly.net/0.1.0/ps/3896383/600/400/m2/fpnw/wm0/cczflukvaqlcqrfocnv9f069ijoynt7o3p0xxl8f45srcgt4glfok7seutownlmm-.jpg?1516798207&s=fa55dcd2daed100152ac14aeea0db2de
+                     height="42" width="42"/>
+            </div>
+
+        </th>
+    </tr>
+</table>
+
+<form>
+    <input class="myButton" type="submit" value="NEM ESIK"/>
+    <input type="hidden" name='"WEB_DATA".ENGEDELYEZES' value="0"/>
+</form>
+<form>
+    <input class="myButton" type="submit" value="ESIK"/>
+    <input type="hidden" name='"WEB_DATA".ENGEDELYEZES' value="1"/>
+</form>
+
+
+<table class="unstyledTable ">
+    <tr>
+        <th>Esik az eső ????</th>
+        <th>
+            <div id="eso">
+                <img src=https://png.pngtree.com/png-vector/20190822/ourlarge/pngtree-rain-icon-sky-filled-with-cartoon-clouds-png-image_1699315.jpg
+                     height="42" width="42"/>
+            </div>
+
+        </th>
+    </tr>
+</table>
+<table class="unstyledTable ">
+    <tr>
+        <th>Szelep Állapota</th>
+        <th>
+            <div id="szelepallapot">
+                <img src=https://image.shutterstock.com/image-vector/gasoline-valve-icon-gas-pipeline-260nw-1477492328.jpg
                      height="42" width="42"/>
             </div>
 
@@ -66,12 +104,30 @@
 <button class="myButton" type="button"><a href=livedata.html>live</a></button>
 
 <script>
-    var szelep = ':="WEB_DATA".SZELEP1:';
-    if (szelep == '1') {
+    var manual = ':="WEB_DATA".SZELEP1:';
+    if (manual == '1') {
 
         document.getElementById('display').style.visibility = 'visible';
     } else {
-        document.getElementById('szelep').style.visibility = 'hidden';
+        document.getElementById('manual').style.visibility = 'hidden';
+    }
+</script>
+<script>
+    var eso = ':="WEB_DATA".ENGEDELYEZES:';
+    if (eso == '1') {
+
+        document.getElementById('display').style.visibility = 'visible';
+    } else {
+        document.getElementById('eso').style.visibility = 'hidden';
+    }
+</script>
+<script>
+    var szelepallapot = ':="WEB_DATA".SZELEPALLAPOT:';
+    if (szelepallapot == '1') {
+
+        document.getElementById('display').style.visibility = 'visible';
+    } else {
+        document.getElementById('szelepallapot').style.visibility = 'hidden';
     }
 </script>
 </body>
