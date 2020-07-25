@@ -1,33 +1,13 @@
 <!-- AWP_In_Variable Name='"WEB_DATA".WORD'-->
-<!-- AWP_In_Variable Name='"WEB_DATA".SZELEP1'-->
-<!-- AWP_In_Variable Name='"WEB_DATA".HETFO'-->
-<!-- AWP_In_Variable Name='"WEB_DATA".KEDD'-->
-<!-- AWP_In_Variable Name='"WEB_DATA".SZERDA'-->
-<!-- AWP_In_Variable Name='"WEB_DATA".CSUTORTOK'-->
-<!-- AWP_In_Variable Name='"WEB_DATA".PENTEK'-->
-<!-- AWP_In_Variable Name='"WEB_DATA".SZOMBAT'-->
-<!-- AWP_In_Variable Name='"WEB_DATA".VASARNAP'-->
-<!-- AWP_In_Variable Name='"WEB_DATA".HETFO_FROM'-->
-<!-- AWP_In_Variable Name='"WEB_DATA".KEDD_FROM'-->
-<!-- AWP_In_Variable Name='"WEB_DATA".SZERDA_FROM'-->
-<!-- AWP_In_Variable Name='"WEB_DATA".CSUTORTOK_FROM'-->
-<!-- AWP_In_Variable Name='"WEB_DATA".PENTEK_FROM'-->
-<!-- AWP_In_Variable Name='"WEB_DATA".SZOMBAT_FROM'-->
-<!-- AWP_In_Variable Name='"WEB_DATA".VASARNAP_FROM'-->
-<!-- AWP_In_Variable Name='"WEB_DATA".HETFO_TO'-->
-<!-- AWP_In_Variable Name='"WEB_DATA".KEDD_TO'-->
-<!-- AWP_In_Variable Name='"WEB_DATA".SZERDA_TO'-->
-<!-- AWP_In_Variable Name='"WEB_DATA".CSUTORTOK_TO'-->
-<!-- AWP_In_Variable Name='"WEB_DATA".PENTEK_TO'-->
-<!-- AWP_In_Variable Name='"WEB_DATA".SZOMBAT_TO'-->
-<!-- AWP_In_Variable Name='"WEB_DATA".VASARNAP_TO'-->
+<!-- AWP_In_Variable Name='"WEB_DATA".ORANKENT'-->
+<!-- AWP_In_Variable Name='"WEB_DATA".PERC'-->
 
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>FOS</title>
+    <title>BEÁLLÍTÁS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="beButton.css">
     <link rel="stylesheet" type="text/css" href="kiButton.css">
@@ -40,265 +20,53 @@
 </head>
 <body>
 
+
+
+
 <form method="post">
-    <table id="days">
+    <table id="days"style="position: absolute; top: 0; bottom: 0; left: 0; right: 0;">
         <tr>
-            <th>Napok</th>
-            <th>Mettől</th>
-            <th>Meddig</th>
+            <th>Hány óránként</th>
+            <th>Mennyi percet</th>
         </tr>
         <tr>
             <td>
-                <label> HÉTFŐ </label>
-                <form>
-                    <input class="beButton" type="submit" value="be"/>
-                    <input type="hidden" name='"WEB_DATA".HETFO' value="1"/>
-
-                </form>
-                <form>
-                    <input class="kiButton" type="submit" value="ki"/>
-                    <input type="hidden" name='"WEB_DATA".HETFO' value="0"/>
-
-                </form>
-                <div id="hetfokep" style="float: right;">
-                    <img src=https://cmkt-image-prd.freetls.fastly.net/0.1.0/ps/3896383/600/400/m2/fpnw/wm0/cczflukvaqlcqrfocnv9f069ijoynt7o3p0xxl8f45srcgt4glfok7seutownlmm-.jpg?1516798207&s=fa55dcd2daed100152ac14aeea0db2de
+                <label> Óra </label>
+				<form method="post">
+					<input name='"WEB_DATA".ORANKENT' type="text"/>
+					<button id='orankentb' class="beButton">save</button>
+					<label id="ORANKENT" name="ORANKENT">:="WEB_DATA".ORANKENT:</label>
+				</form>
+        
+                <div id="orankentkep" style="float: right;">
+                    <img src=https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRPdNQNwuqa9rq_3f_dRg5TlqG6Q61wJjrwcw&usqp=CAU
                          height="40" width="40"/>
                 </div>
 
             </td>
-            <td>
-                <input id='hetfofrom' type="time"/>
-                <button id='hetfofromb' class="beButton">Save</button>
-                <label id="HETFO_FROM" name="HETFO_FROM">:="WEB_DATA".HETFO_FROM:</label>
-            </td>
-            <td>
-                <input id='hetfoto' type="time"/>
-                <button id='hetfotob' class="beButton">Save</button>
-                <label id="HETFO_TO" name="HETFO_TO">:="WEB_DATA".HETFO_TO:</label>
-            <td/>
-        </tr>
-        <tr>
-            <td>
-                <label> KEDD </label>
-                <form>
-                    <input class="beButton" type="submit" value="be"/>
-                    <input type="hidden" name='"WEB_DATA".KEDD' value="1"/>
-
-                </form>
-                <form>
-                    <input class="kiButton" type="submit" value="ki"/>
-                    <input type="hidden" name='"WEB_DATA".KEDD' value="0"/>
-
-                </form>
-                <div id="keddkep" style="float: right;">
-                    <img src=https://cmkt-image-prd.freetls.fastly.net/0.1.0/ps/3896383/600/400/m2/fpnw/wm0/cczflukvaqlcqrfocnv9f069ijoynt7o3p0xxl8f45srcgt4glfok7seutownlmm-.jpg?1516798207&s=fa55dcd2daed100152ac14aeea0db2de
+			<td>
+                <label> Perc </label>
+				<form method="post">
+					<input name='"WEB_DATA".PERC' type="text"/>
+					<button id='percb' class="beButton">save</button>
+					<label id="PERC" name="PERC">:="WEB_DATA".PERC:</label>
+				</form>
+        
+                <div id="perckep" style="float: right;">
+                    <img src=https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTb-FC_4ffTvDD0fjeO6zTqPmFP988oyVzHRg&usqp=CAU
                          height="40" width="40"/>
                 </div>
+
             </td>
-            <td>
-                <input id='keddfrom' type="time"/>
-                <button id='keddfromb' class="beButton">Save</button>
-                <label id="KEDD_FROM" name="KEDD_FROM">:="WEB_DATA".KEDD_FROM:</label>
-            </td>
-            <td>
-                <input id='keddto' type="time"/>
-                <button id='keddtob' class="beButton">Save</button>
-                <label id="KEDD_TO" name="KEDD_TO">:="WEB_DATA".KEDD_TO:</label>
-            <td/>
+       
         </tr>
-        <tr>
-            <td>
-                <label> SZERDA </label>
-                <form>
-                    <input class="beButton" type="submit" value="be"/>
-                    <input type="hidden" name='"WEB_DATA".SZERDA' value="1"/>
-
-                </form>
-                <form>
-                    <input class="kiButton" type="submit" value="ki"/>
-                    <input type="hidden" name='"WEB_DATA".SZERDA' value="0"/>
-
-                </form>
-                <div id="szerdakep" style="float: right;">
-                    <img src=https://cmkt-image-prd.freetls.fastly.net/0.1.0/ps/3896383/600/400/m2/fpnw/wm0/cczflukvaqlcqrfocnv9f069ijoynt7o3p0xxl8f45srcgt4glfok7seutownlmm-.jpg?1516798207&s=fa55dcd2daed100152ac14aeea0db2de
-                         height="40" width="40"/>
-                </div>
-            </td>
-            <td>
-                <input id='szerdafrom' type="time"/>
-                <button id='szerdafromb' class="beButton">Save</button>
-                <label id="SZERDA_FROM" name="SZERDA_FROM">:="WEB_DATA".SZERDA_FROM:</label>
-            </td>
-            <td>
-                <input id='szerdato' type="time"/>
-                <button id='szerdatob' class="beButton">Save</button>
-                <label id="SZERDA_TO" name="SZERDA_TO">:="WEB_DATA".SZERDA_TO:</label>
-            <td/>
-        </tr>
-        <tr>
-            <td>
-                <label> CSÜTÖRTÖK </label>
-                <form>
-                    <input class="beButton" type="submit" value="be"/>
-                    <input type="hidden" name='"WEB_DATA".CSUTORTOK' value="1"/>
-
-                </form>
-                <form>
-                    <input class="kiButton" type="submit" value="ki"/>
-                    <input type="hidden" name='"WEB_DATA".CSUTORTOK' value="0"/>
-
-                </form>
-                <div style="float: right;">
-                    <img id="csutkep"
-                         src=https://cmkt-image-prd.freetls.fastly.net/0.1.0/ps/3896383/600/400/m2/fpnw/wm0/cczflukvaqlcqrfocnv9f069ijoynt7o3p0xxl8f45srcgt4glfok7seutownlmm-.jpg?1516798207&s=fa55dcd2daed100152ac14aeea0db2de
-                         height="40" width="40"/>
-                </div>
-            </td>
-            <td>
-                <input id='csutortokfrom' type="time"/>
-                <button id='csutortokfromb' class="beButton">Save</button>
-                <label id="CSUTORTOK_FROM" name="CSUTORTOK_FROM">:="WEB_DATA".CSUTORTOK_FROM:</label>
-            </td>
-            <td>
-                <input id='csutortokto' type="time"/>
-                <button id='csutortoktob' class="beButton">Save</button>
-                <label id="CSUTORTOK_TO" name="CSUTORTOK_TO">:="WEB_DATA".CSUTORTOK_TO:</label>
-            <td/>
-        </tr>
-        <tr>
-            <td>
-                <label> PÉNTEK </label>
-                <form>
-                    <input class="beButton" type="submit" value="be"/>
-                    <input type="hidden" name='"WEB_DATA".PENTEK' value="1"/>
-
-                </form>
-                <form>
-                    <input class="kiButton" type="submit" value="ki"/>
-                    <input type="hidden" name='"WEB_DATA".PENTEK' value="0"/>
-
-                </form>
-                <div id="pentekkep" style="float: right;">
-                    <img src=https://cmkt-image-prd.freetls.fastly.net/0.1.0/ps/3896383/600/400/m2/fpnw/wm0/cczflukvaqlcqrfocnv9f069ijoynt7o3p0xxl8f45srcgt4glfok7seutownlmm-.jpg?1516798207&s=fa55dcd2daed100152ac14aeea0db2de
-                         height="40" width="40"/>
-                </div>
-            </td>
-            <td>
-                <input id='pentekfrom' type="time"/>
-                <button id='pentekfromb' class="beButton">Save</button>
-                <label id="PENTEK_FROM" name="PENTEK_FROM">:="WEB_DATA".PENTEK_FROM:</label>
-            </td>
-            <td>
-                <input id='pentekto' type="time"/>
-                <button id="pentektob" class="beButton">Save</button>
-                <label id="PENTEK_TO" name="PENTEK_TO">:="WEB_DATA".PENTEK_TO:</label>
-            <td/>
-        </tr>
-        <tr>
-            <td>
-                <label> SZOMBAT </label>
-                <form>
-                    <input class="beButton" type="submit" value="be"/>
-                    <input type="hidden" name='"WEB_DATA".SZOMBAT' value="1"/>
-
-                </form>
-                <form>
-                    <input class="kiButton" type="submit" value="ki"/>
-                    <input type="hidden" name='"WEB_DATA".SZOMBAT' value="0"/>
-
-                </form>
-                <div id="szombatkep" style="float: right;">
-                    <img src=https://cmkt-image-prd.freetls.fastly.net/0.1.0/ps/3896383/600/400/m2/fpnw/wm0/cczflukvaqlcqrfocnv9f069ijoynt7o3p0xxl8f45srcgt4glfok7seutownlmm-.jpg?1516798207&s=fa55dcd2daed100152ac14aeea0db2de
-                         height="40" width="40"/>
-                </div>
-            </td>
-            <td>
-                <input id='szombatfrom' type="time"/>
-                <button id='szombatfromb' class="beButton">Save</button>
-                <label id="SZOMBAT_FROM" name="SZOMBAT_FROM">:="WEB_DATA".SZOMBAT_FROM:</label>
-            </td>
-            <td>
-                <input id='szombatto' type="time"/>
-                <button id="szombattob" class="beButton">Save</button>
-                <label id="SZOMBAT_TO" name="SZOMBAT_TO">:="WEB_DATA".SZOMBAT_TO:</label>
-            <td/>
-        </tr>
-        <tr>
-            <td>
-                <label> VASÁRNAP </label>
-                <form>
-                    <input class="beButton" type="submit" value="be"/>
-                    <input type="hidden" name='"WEB_DATA".VASARNAP' value="1"/>
-
-                </form>
-                <form>
-                    <input class="kiButton" type="submit" value="ki"/>
-                    <input type="hidden" name='"WEB_DATA".VASARNAP' value="0"/>
-
-                </form>
-                <div id="vasarnapkep" style="float: right;">
-                    <img src=https://cmkt-image-prd.freetls.fastly.net/0.1.0/ps/3896383/600/400/m2/fpnw/wm0/cczflukvaqlcqrfocnv9f069ijoynt7o3p0xxl8f45srcgt4glfok7seutownlmm-.jpg?1516798207&s=fa55dcd2daed100152ac14aeea0db2de
-                         height="40" width="40"/>
-                </div>
-            </td>
-            <td>
-                <input id='vasarnapfrom' type="time"/>
-                <button id='vasarnapfromb' class="beButton">Save</button>
-                <label id="VASARNAP_FROM" name="VASARNAP_FROM">:="WEB_DATA".VASARNAP_FROM:</label>
-            </td>
-            <td>
-                <input id='vasarnapto' type="time"/>
-                <button id="vasarnaptob class=" beButton>>Save</button>
-                <label id="VASARNAP_TO" name="VASARNAP_TO">:="WEB_DATA".VASARNAP_TO:</label>
-            <td/>
-        </tr>
+ 
 
     </table>
 </form>
 
 <button class="myButton" type="submit"><a href=index1.html>vissza</a></button>
-<script>
 
-    var hetfokep = ':="WEB_DATA".HETFO:';
-    var keddkep = ':="WEB_DATA".KEDD:';
-    var szerdakep = ':="WEB_DATA".SZERDA:';
-    var csutkep = ':="WEB_DATA".CSUTORTOK:';
-    var pentekkep = ':="WEB_DATA".PENTEK:';
-    var szombatkep = ':="WEB_DATA".SZOMBAT:';
-    var vasarnapkep = ':="WEB_DATA".VASARNAP:';
-
-
-    var hetfoimage = document.getElementById("hetfokep");
-    var keddimage = document.getElementById("keddkep");
-    var szerdaimage = document.getElementById("szerdakep");
-    var csutimage = document.getElementById("csutkep");
-    var pentekimage = document.getElementById("pentekkep");
-    var szombatimage = document.getElementById("szombatkep");
-    var vasarnapimage = document.getElementById("vasarnapkep");
-
-    if (hetfokep == '1') {
-        hetfoimage.style.display = 'block';
-    }
-    if (keddkep == '1') {
-        keddimage.style.display = 'block';
-    }
-    if (szerdakep == '1') {
-        szerdaimage.style.display = 'block';
-    }
-    if (csutkep == '1') {
-        csutimage.style.display = 'block';
-    }
-    if (pentekkep == '1') {
-        pentekimage.style.display = 'block';
-    }
-    if (szombatkep == '1') {
-        szombatimage.style.display = 'block';
-    }
-    if (vasarnapkep == '1') {
-        vasarnapimage.style.display = 'block';
-    }
-
-</script>
 
 </body>
 <script type="text/javascript">
@@ -308,195 +76,41 @@
         $.post("/FormLogin", spost, function (result) {
         });
 
-        //query the HETFO_FROM variable every second
+        //query the ORANKENT variable every second
         $.ajaxSetup({cache: false});
         setInterval(function () {
-            $.get("IO/hetfofrom.html", function (result) {
-                $('#HETFO_FROM').text(result);
+            $.get("IO/orankent.html", function (result) {
+                $('#ORANKENT').text(result);
             });
         }, 100);
         setInterval(function () {
-            $.get("IO/hetfoto.html", function (result) {
-                $('#HETFO_TO').text(result);
-            });
-        }, 100);
-        setInterval(function () {
-            $.get("IO/keddfrom.html", function (result) {
-                $('#KEDD_FROM').text(result);
-            });
-        }, 100);
-        setInterval(function () {
-            $.get("IO/keddto.html", function (result) {
-                $('#KEDD_TO').text(result);
-            });
-        }, 100);
-        setInterval(function () {
-            $.get("IO/szerdafrom.html", function (result) {
-                $('#SZERDA_FROM').text(result);
-            });
-        }, 100);
-        setInterval(function () {
-            $.get("IO/szerdato.html", function (result) {
-                $('#SZERDA_TO').text(result);
-            });
-        }, 100);
-        setInterval(function () {
-            $.get("IO/csutortokfrom.html", function (result) {
-                $('#CSUTORTOK_FROM').text(result);
-            });
-        }, 100);
-        setInterval(function () {
-            $.get("IO/csutortokto.html", function (result) {
-                $('#CSUTORTOK_TO').text(result);
-            });
-        }, 100);
-        setInterval(function () {
-            $.get("IO/pentekfrom.html", function (result) {
-                $('#PENTEK_FROM').text(result);
-            });
-        }, 100);
-        setInterval(function () {
-            $.get("IO/pentekto.html", function (result) {
-                $('#PENTEK_TO').text(result);
-            });
-        }, 100);
-        setInterval(function () {
-            $.get("IO/szombatfrom.html", function (result) {
-                $('#SZOMBAT_FROM').text(result);
-            });
-        }, 100);
-        setInterval(function () {
-            $.get("IO/szombatto.html", function (result) {
-                $('#SZOMBAT_TO').text(result);
-            });
-        }, 100);
-        setInterval(function () {
-            $.get("IO/vasarnapfrom.html", function (result) {
-                $('#VASARNAP_FROM').text(result);
-            });
-        }, 100);
-        setInterval(function () {
-            $.get("IO/vasarnapto.html", function (result) {
-                $('#VASARNAP_TO').text(result);
+            $.get("IO/perc.html", function (result) {
+                $('#PERC').text(result);
             });
         }, 100);
 
 
-        //modify the HETFO_FROM value
+
+        //modify the ORANKENT value
         $("button").click(function () {
 
-            if (this.id === 'hetfofromb') {
-                url = "IO/hetfofrom.html";
-                name1 = '"WEB_DATA".HETFO_FROM';
-                val = $('input[id=hetfofrom]').val();
+            if (this.id === 'orankentb') {
+                url = "IO/orankent.html";
+                name1 = '"WEB_DATA".ORANKENT';
+                val = $('input[id=orankent]').val();
                 sdata = escape(name1) + '=' + val;
                 $.post(url, sdata, function (result) {
                 });
             }
-            else if (this.id === 'hetfotob') {
-                url = "IO/hetfoto.html";
-                name2 = '"WEB_DATA".HETFO_TO';
-                val = $('input[id=hetfoto]').val();
+            else if (this.id === 'percb') {
+                url = "IO/perc.html";
+                name2 = '"WEB_DATA".PERC';
+                val = $('input[id=perc]').val();
                 sdata = escape(name2) + '=' + val;
                 $.post(url, sdata, function (result) {
                 });
             }
-            else if (this.id === 'keddfromb') {
-                url = "IO/keddfrom.html";
-                name3 = '"WEB_DATA".KEDD_FROM';
-                val = $('input[id=keddfrom]').val();
-                sdata = escape(name3) + '=' + val;
-                $.post(url, sdata, function (result) {
-                });
-            }
-            else if (this.id === 'keddtob') {
-                url = "IO/keddto.html";
-                name4 = '"WEB_DATA".KEDD_TO';
-                val = $('input[id=keddto]').val();
-                sdata = escape(name4) + '=' + val;
-                $.post(url, sdata, function (result) {
-                });
-            }
-            else if (this.id === 'szerdafromb') {
-                url = "IO/szerdafrom.html";
-                name5 = '"WEB_DATA".SZERDA_FROM';
-                val = $('input[id=szerdafrom]').val();
-                sdata = escape(name5) + '=' + val;
-                $.post(url, sdata, function (result) {
-                });
-            }
-            else if (this.id === 'szerdatob') {
-                url = "IO/szerdato.html";
-                name6 = '"WEB_DATA".SZERDA_TO';
-                val = $('input[id=szerdato]').val();
-                sdata = escape(name6) + '=' + val;
-                $.post(url, sdata, function (result) {
-                });
-            }
-            else if (this.id === 'csutortokfromb') {
-                url = "IO/csutortokfrom.html";
-                name7 = '"WEB_DATA".CSUTORTOK_FROM';
-                val = $('input[id=csutortokfrom]').val();
-                sdata = escape(name7) + '=' + val;
-                $.post(url, sdata, function (result) {
-                });
-            }
-            else if (this.id === 'csutortoktob') {
-                url = "IO/csutortokto.html";
-                name8 = '"WEB_DATA".CSUTORTOK_TO';
-                val = $('input[id=csutortokto]').val();
-                sdata = escape(name8) + '=' + val;
-                $.post(url, sdata, function (result) {
-                });
-            }
-            else if (this.id === 'pentekfromb') {
-                url = "IO/pentekfrom.html";
-                name9 = '"WEB_DATA".PENTEK_FROM';
-                val = $('input[id=pentekfrom]').val();
-                sdata = escape(name9) + '=' + val;
-                $.post(url, sdata, function (result) {
-                });
-            }
-            else if (this.id === 'pentektob') {
-                url = "IO/pentekto.html";
-                name10 = '"WEB_DATA".PENTEK_TO';
-                val = $('input[id=pentekto]').val();
-                sdata = escape(name10) + '=' + val;
-                $.post(url, sdata, function (result) {
-                });
-            }
-            else if (this.id === 'szombatfromb') {
-                url = "IO/szombatfrom.html";
-                name11 = '"WEB_DATA".SZOMBAT_FROM';
-                val = $('input[id=szombatfrom]').val();
-                sdata = escape(name11) + '=' + val;
-                $.post(url, sdata, function (result) {
-                });
-            }
-            else if (this.id === 'szombattob') {
-                url = "IO/szombatto.html";
-                name12 = '"WEB_DATA".SZOMBAT_TO';
-                val = $('input[id=szombatto]').val();
-                sdata = escape(name12) + '=' + val;
-                $.post(url, sdata, function (result) {
-                });
-            }
-            else if (this.id === 'vasarnapfromb') {
-                url = "IO/vasarnapfrom.html";
-                name13 = '"WEB_DATA".VASARNAP_FROM';
-                val = $('input[id=vasarnapfrom]').val();
-                sdata = escape(name13) + '=' + val;
-                $.post(url, sdata, function (result) {
-                });
-            }
-            else if (this.id === 'vasarnaptob') {
-                
-                url = "IO/vasarnapto.html";
-                name14 = '"WEB_DATA".VASARNAP_TO';
-                val = $('input[id=vasarnapto]').val();
-                sdata = escape(name14) + '=' + val;
-                $.post(url, sdata, function (result) {
-                });
+           
             }
 
         });

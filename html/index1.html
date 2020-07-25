@@ -2,27 +2,7 @@
 <!-- AWP_In_Variable Name='"WEB_DATA".SZELEP1'-->
 <!-- AWP_In_Variable Name='"WEB_DATA".ENGEDELYEZES'-->
 <!-- AWP_In_Variable Name='"WEB_DATA".SZELEPALLAPOT'-->
-<!-- AWP_In_Variable Name='"WEB_DATA".HETFO'-->
-<!-- AWP_In_Variable Name='"WEB_DATA".KEDD'-->
-<!-- AWP_In_Variable Name='"WEB_DATA".SZERDA'-->
-<!-- AWP_In_Variable Name='"WEB_DATA".CSUTORTOK'-->
-<!-- AWP_In_Variable Name='"WEB_DATA".PENTEK'-->
-<!-- AWP_In_Variable Name='"WEB_DATA".SZOMBAT'-->
-<!-- AWP_In_Variable Name='"WEB_DATA".VASARNAP'-->
-<!-- AWP_In_Variable Name='"WEB_DATA".HETFO_FROM'-->
-<!-- AWP_In_Variable Name='"WEB_DATA".KEDD_FROM'-->
-<!-- AWP_In_Variable Name='"WEB_DATA".SZERDA_FROM'-->
-<!-- AWP_In_Variable Name='"WEB_DATA".CSUTORTOK_FROM'-->
-<!-- AWP_In_Variable Name='"WEB_DATA".PENTEK_FROM'-->
-<!-- AWP_In_Variable Name='"WEB_DATA".SZOMBAT_FROM'-->
-<!-- AWP_In_Variable Name='"WEB_DATA".VASARNAP_FROM'-->
-<!-- AWP_In_Variable Name='"WEB_DATA".HETFO_TO'-->
-<!-- AWP_In_Variable Name='"WEB_DATA".KEDD_TO'-->
-<!-- AWP_In_Variable Name='"WEB_DATA".SZERDA_TO'-->
-<!-- AWP_In_Variable Name='"WEB_DATA".CSUTORTOK_TO'-->
-<!-- AWP_In_Variable Name='"WEB_DATA".PENTEK_TO'-->
-<!-- AWP_In_Variable Name='"WEB_DATA".SZOMBAT_TO'-->
-<!-- AWP_In_Variable Name='"WEB_DATA".VASARNAP_TO'-->
+
 
 
 <!DOCTYPE html>
@@ -36,11 +16,7 @@
     <link rel="stylesheet" type="text/css" href="daysTable.css">
 </head>
 <body>
-:="WEB_DATA".WORD:
-<form method="post">
-    <input name='"WEB_DATA".WORD' type="text"/>
-    <button type="submit">save</button>
-</form>
+
 <form>
     <input class="myButton" type="submit" value="START"/>
     <input type="hidden" name='"WEB_DATA".SZELEP1' value="1"/>
@@ -51,7 +27,7 @@
 </form>
 
 
-<table class="unstyledTable ">
+<table class="unstyledTable " >
     <tr>
         <th>Manualisan Elinditva</th>
         <th>
@@ -101,7 +77,6 @@
 
 
 <button class="myButton" type="button"><a href=setting.html>beállítás</a></button>
-<button class="myButton" type="button"><a href=livedata.html>live</a></button>
 
 <script>
     var manual = ':="WEB_DATA".SZELEP1:';
